@@ -1,0 +1,372 @@
+tag_id,tag
+0,eCommerce
+1,Marketplace
+2,Business
+3,Food
+4,Beer
+5,Social
+6,Music
+7,Recommendations
+8,Data
+9,Tools
+10,Text-to-Speech
+11,Voice
+12,Recognition
+13,Events
+14,Education
+15,Games
+16,Enterprise
+17,Wiki
+18,Search
+19,Mapping
+20,Analytics
+21,Marketing
+22,Bookmarks
+23,Design
+24,Payments
+25,Localization
+26,Flowers
+27,Shipping
+28,Semantics
+29,Text
+30,Extraction
+31,Government
+32,England
+33,Accounts
+34,Q&A
+35,Streaming
+36,Personal Information Management
+37,Tasks
+38,Advertising
+39,Entertainment
+40,TV
+41,Project Management
+42,Collaboration
+43,Time Tracking
+44,URL Shortener
+45,Forms
+46,Reference
+47,Time
+48,Animals
+49,Adoption
+50,Pets
+51,Russian
+52,Other
+53,Hosting
+54,Content
+55,Content Management
+56,Security
+57,Storage
+58,Books
+59,Religion
+60,Mail
+61,Addresses
+62,Billing
+63,Campaigns
+64,Validation
+65,Office
+66,Blogging
+67,Referrals
+68,Images
+69,Viewer
+70,Applications
+71,Automation
+72,Application Development
+73,Aggregation
+74,Coupons
+75,Financial
+76,Bitcoin
+77,Currency
+78,Video
+79,Media
+80,Telephony
+81,Cloud
+82,Indian
+83,Photos
+84,Webhooks
+85,Language
+86,Support
+87,News Services
+88,Metadata
+89,Authentication
+90,Messaging
+91,USA
+92,Reporting
+93,COVID-19
+94,Coronavirus
+95,International
+96,Domains
+97,Science
+98,Auto
+99,Travel
+100,Reservations
+101,Hotels
+102,Canadian
+103,Transportation
+104,Translation
+105,Real Time
+106,Datacenter
+107,Machine Learning
+108,Mobile
+109,Keywords
+110,Directories
+111,Australian
+112,Postal
+113,Classification
+114,Email
+115,Law
+116,Demographics
+117,Statistics
+118,Registration
+119,Tickets
+120,Upload
+121,Backup
+122,Energy
+123,Sustainability
+124,Backend
+125,Printing
+126,Movies
+127,Booking
+128,Protocol
+129,Stocks
+130,Privacy
+131,Data Mining
+132,Sports
+133,Lists
+134,Library
+135,Jobs
+136,Human Resources
+137,Crowdsourcing
+138,URLs
+139,Medical
+140,Health
+141,Fitness
+142,Dieting
+143,B2B
+144,Banking
+145,Astronomy
+146,Catalogs
+147,Discounts
+148,Widgets
+149,Dictionary
+150,Postcodes
+151,Community
+152,File Sharing
+153,Sentiment
+154,Captcha
+155,Spam
+156,Management
+157,Monitoring
+158,New York City
+159,Electronic Signature
+160,Contracts
+161,Documents
+162,SEO
+163,Database
+164,Weather
+165,Notifications
+166,Customer Relationship Management
+167,Accounting
+168,Chat
+169,Customization
+170,3D
+171,Audio
+172,Lyrics
+173,Spanish
+174,Real Estate
+175,Calendars
+176,Guides
+177,Feeds
+178,Gadgets
+179,Products
+180,Restaurants
+181,Verification
+182,Goals
+183,Contacts
+184,Charity
+185,Gambling
+186,Syncing
+187,Invoicing
+188,Licensing
+189,Spreadsheets
+190,Organization
+191,Monetization
+192,Optimization
+193,Natural Language Processing
+194,Home Automation
+195,Internet of Things
+196,Geography
+197,API
+198,Backend-as-a-Service
+199,Postcards
+200,Sales
+201,Screenshots
+202,Software-as-a-Service
+203,Japanese
+204,Developers
+205,Integration
+206,PDF
+207,Conversions
+208,HTML5
+209,Location
+210,Wearable
+211,Actors
+212,Augmented Reality
+213,Platform-as-a-Service
+214,Crime
+215,Summary
+216,Nordic
+217,Editing
+218,Web Site Management
+219,Comparisons
+220,Fashion
+221,Family
+222,Names
+223,Classifieds
+224,Plugins
+225,Prices
+226,Purchasing
+227,Publishing
+228,Subscriptions
+229,Non-Profit
+230,Art
+231,Ratings
+232,Profiles
+233,Merchants
+234,Activity Streams
+235,Earthquakes
+236,Emergency
+237,Police
+238,Healthcare
+239,Open Data
+240,Data-as-a-Service
+241,VoIP
+242,Environment
+243,Identity
+244,European
+245,Transcoding
+246,Humor
+247,Cycling
+248,Registry
+249,SDK
+250,Charts
+251,Visualizations
+252,Grocery
+253,Nutrition
+254,Holidays
+255,Intelligence
+256,Microservices
+257,Dashboards
+258,Open Source
+259,Customer Service
+260,API Management
+261,Fantasy Sports
+262,Math
+263,Random
+264,History
+265,eBooks
+266,Wi-Fi
+267,Cryptocurrency
+268,Words
+269,Writing
+270,Medicine
+271,Italian
+272,Hardware
+273,Wine
+274,Tagging
+275,Blockchain
+276,Brazilian
+277,Water
+278,Museums
+279,Predictions
+280,Testing
+281,French
+282,Copyright
+283,Air Travel
+284,Korean
+285,Politics
+286,Tourism
+287,Scheduling
+288,ERP
+289,Notes
+290,Nature
+291,Avatars
+292,Bots
+293,REST
+294,Graphics
+295,Belgian
+296,Fax
+297,Competitions
+298,Engagement
+299,Artificial Intelligence
+300,Standards
+301,Big Data
+302,Loyalty
+303,Rewards
+304,OAuth
+305,Barcodes
+306,Marine
+307,Polls
+308,Forums
+309,Chinese
+310,Spelling
+311,Drawing
+312,eSports
+313,Housing
+314,Rentals
+315,Meme
+316,Accessibility
+317,Romanian
+318,German
+319,Subtitles
+320,Learning Management Systems
+321,NoSQL
+322,SQL
+323,Transactions
+324,Torrents
+325,Military
+326,Reputation
+327,Economics
+328,Animation
+329,Auctions
+330,Credit Cards
+331,Ordering
+332,Colors
+333,Hobbies
+334,Breweries
+335,RDF
+336,Annotations
+337,Webcams
+338,African
+339,Compliance
+340,Feedback
+341,Database-as-a-Service
+342,Measurements
+343,Inventory
+344,API Strategy
+345,Taxes
+346,Funding
+347,North America
+348,Refunds
+349,Bluetooth
+350,Smartphone
+351,Fonts
+352,Surveys
+353,Cities
+354,Planning
+355,Beauty
+356,Background
+357,Framework
+358,Training
+359,Logistics
+360,Newsletter
+361,Parsing
+362,Performance
+363,Recreation
+364,Quantified Self
+365,Agriculture
+366,Asia
+367,Collecting
+368,Countries
+369,Networking
+370,Call Management
