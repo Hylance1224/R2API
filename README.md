@@ -13,9 +13,9 @@ Here is the relevant dataset and open-source code for the article titled "R2API:
         python main.py --dataset fold_1 --weight_decay 0.0001 --lr 0.01 
         --pretrain 0 --save_flag 1
 
-2.  **Model testing**
+2.  **Recommendation generation**
 
-    Start Python in COMMAND LINE mode, then use the following statement (one line in the COMMAND Prompt window) to execute **test\_model.py**:
+    Start Python in COMMAND LINE mode, then use the following statement (one line in the COMMAND Prompt window) to execute **generate\_recommendation.py**:
 
         python generate_recommendation.py --dataset fold_1 --output_path output
 
