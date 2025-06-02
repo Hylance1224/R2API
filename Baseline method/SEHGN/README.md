@@ -1,0 +1,38 @@
+# SEHGN
+
+This is an implementation for the paper: SEHGN: Semantic-Enhanced Heterogeneous Graph Network for Web API Recommendation
+
+## Usage
+
+```bash
+python model/SEHGN.py
+```
+
+## **🔧 Supplementary Instructions (added by Yihui Wang**👩‍💻)
+
+The following section provides additional guidance for setting up and running the project.
+
+### 1. Python Version Requirements and Dependency Installation
+
+**Recommended Environment:** Python 3.7.0\
+To install the required dependencies, run the following command:
+
+    pip install -r requirements.txt
+
+### 2. Data generation&#x20;
+
+To generate the necessary data, execute:
+
+    python.exe generate_data.py
+
+### 3. file downloading and unzip
+
+**Download** the file from:\
+<http://nlp.stanford.edu/data/glove.6B.zip>
+
+&#x20;**Unzip** it and place the file `glove.6B.200d.txt` into the folder named `.vec_cache` under the project root.
+
+### 4. Model training and testing
+
+    python model/SEHGN.py
+
