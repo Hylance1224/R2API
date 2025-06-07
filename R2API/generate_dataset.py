@@ -5,8 +5,10 @@ import numpy as np
 from sentence_transformers import SentenceTransformer
 
 # 加载数据
-with open('Original Dataset/shuffle_mashup.json', 'r', encoding='utf-8') as f:
+with open('Original Dataset/programmable_mashups.json', 'r', encoding='utf-8') as f:
     mashups = json.load(f)
+# import random
+# random.shuffle(mashups)  # 原地打乱列表顺序
 
 with open('Original Dataset/api.json', 'r', encoding='utf-8') as f:
     apis = json.load(f)
@@ -39,7 +41,7 @@ N = len(mashups)
 fold_size = N // 10
 
 # 初始化SentenceTransformer模型
-model = SentenceTransformer('sentence-transformers/distiluse-base-multilingual-cased-v2')
+model = SentenceTransformer('sentence-transformers/all-mpnet-base-v2')
 
 
 def save_vectors_h5(filename, id_to_text):
@@ -63,7 +65,7 @@ save_vectors_h5('data/vectors.h5', mashup_id_to_desc)
 
 # 生成10折文件
 for fold in range(10):
-    fold_dir = f'training_dataset/fold_{fold + 1}'
+    fold_dir = f'dataset/fold_{fold + 1}'
     os.makedirs(fold_dir, exist_ok=True)
 
     start = fold * fold_size
@@ -100,9 +102,16 @@ for fold in range(10):
         for tag, tid in mashup_tag2id.items():
             f.write(f'{tid}, {tag}\n')
 
-    # mashup_tag.csv
+    # # mashup_tag.csv
+    # with open(os.path.join(fold_dir, 'mashup_tags.csv'), 'w', encoding='utf-8') as f:
+    #     for m in mashups:
+    #         tags = mashup_id_to_tags[m['id']]
+    #         tag_ids = [str(mashup_tag2id[t]) for t in tags if t in mashup_tag2id]
+    #         f.write(f"{m['id']} " + ' '.join(tag_ids) + '\n')
+
+    # mashup_tag.csv（只写入训练集中的 mashup）
     with open(os.path.join(fold_dir, 'mashup_tags.csv'), 'w', encoding='utf-8') as f:
-        for m in mashups:
-            tags = mashup_id_to_tags[m['id']]
+        for m in train_set:
+            tags = mashup_id_to_tags.get(m['id'], [])
             tag_ids = [str(mashup_tag2id[t]) for t in tags if t in mashup_tag2id]
             f.write(f"{m['id']} " + ' '.join(tag_ids) + '\n')

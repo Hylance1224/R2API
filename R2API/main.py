@@ -8,6 +8,9 @@ import h5py
 from scipy.spatial.distance import cosine
 import numpy as np
 import json
+import torch
+import warnings
+warnings.filterwarnings("ignore")
 
 
 
@@ -21,11 +24,13 @@ alpha2=args.alpha2
 alpha3=args.alpha3
 alpha4=args.alpha4
 
+
 def jaccard_similarity(matrix):
     intersection = np.dot(matrix, matrix.T)
     square_sum = np.diag(intersection)  # 获取对角线上的元素
     union = square_sum[:, None] + square_sum - intersection
     return np.divide(intersection, union)
+
 
 class Model_Wrapper(object):
     def __init__(self, data_config,config_mashup,config_api, pretrain_data):
@@ -458,11 +463,6 @@ class Model_Wrapper(object):
 
         return u_avg
 
-    import json
-    import numpy as np
-    import torch
-
-
 
     def save_recResult(self):
         self.model.eval()
@@ -503,15 +503,16 @@ class Model_Wrapper(object):
                 # Calculate item ratings
                 i_embeddings = ia_embeddings  # No need to recompute item embeddings each time
                 rate_batch = torch.matmul(average_embedding, i_embeddings.T)
+
                 rate_batch = rate_batch.detach().cpu().numpy()
 
                 # Get top 20 items based on ratings
-                top_10_indices = np.argsort(rate_batch)[-20:][::-1]
+                top_20_indices = np.argsort(rate_batch)[-20:][::-1]
 
                 # Prepare data for writing
                 write_data = {
                     'mashup_id': user,
-                    'recommend_api': top_10_indices.tolist(),
+                    'recommend_api': top_20_indices.tolist(),
                 }
 
                 # Write recommendation results to file

@@ -2,7 +2,7 @@ from transformers import AutoModelForMaskedLM, AutoTokenizer
 from transformers import DataCollatorForLanguageModeling
 from transformers import Trainer, TrainingArguments
 from transformers import LineByLineTextDataset
-from model.MSG.utils import get_indices
+from utils import get_indices
 import json
 import os
 import math

@@ -1,79 +1,104 @@
 # R2API: A novel method for web API recommendation by using HGNNs with multi-task learning
 
-Here is the relevant dataset and open-source code for the article titled "R2API: A novel method for web API recommendation by using HGNNs with multi-task learning"
+This repository contains the dataset and source code for the paper:\
+**"R2API: A Novel Method for Web API Recommendation Using HGNNs with Multi-task Learning"**
 
 ## 1. R2API
 
-### 1.1 Environment Settup
+### 1.1 Environment Setup
 
 Our code has been tested under **Python 3.12.3**, and the following packages are required:
 
-    h5py==3.11.0
-    scikit_learn==1.4.2
-    sentence_transformers==2.7.0
+    h5py==3.11.0 
+    scikit_learn==1.4.2 
+    sentence_transformers==2.7.0 
     torch==2.7.0+cu126
+
+We recommend setting up the environment using **Conda** to ensure compatibility and ease of installation.
+
+#### ✅ Step 1: Create and activate a new Conda environment
+
+    conda create -n R2API python=3.12.3 -y
+    conda activate R2API 
+
+#### ✅ Step 2: Install the required Python packages
+
+Install all dependencies (except PyTorch) via `requirements.txt`:
+
+    pip install -r requirements.txt
+
+> ⚠️ Note: The `requirements.txt` file includes all necessary libraries **except for PyTorch**, which should be installed separately to match your system and CUDA version.
+
+#### ✅ Step 3: Install PyTorch manually
+
+Visit the official PyTorch installation page to choose the correct version for your environment.\
+For example, to install **PyTorch with CUDA 12.6**, use:
+
+    pip install torch --index-url https://download.pytorch.org/whl/cu126
 
 ### 1.2 Usage
 
-1.  **Package installation**
+#### ✅ Step 1: Data generation (Optional)
 
-        pip install -r requirements.txt
+> This step can be skipped, as all required training and testing files have already been generated in advance. However, if you intend to apply the method to a new dataset, you may execute the following script.
 
-2.  **Data Generation (Optional)**&#x20;
+To generate the dataset, start Python in **command line** mode and run:
 
-    > This step can be skipped, as all necessary training and testing files have already been prepared for the experiments in this paper. However, if you wish to run the experiments on a new dataset, you can execute the following script.
+    python generate_dataset.py
 
-    To generate the dataset, start Python in **command line** mode and run:
+This script uses the original files `Original Dataset/programmable_mashup.json` and `Original Dataset/api.json` as input and performs the following operations:
 
-        python generate_dataset.py
+*   Generates **10-fold cross-validation data**  under the `dataset` folder.
 
-    This script uses the original files `Original Dataset/shuffle_mashup.json` and `Original Dataset/api.json` as input and performs the following operations:
+*   Creates a `data` folder containing:
 
-    *   Generates **10-fold cross-validation data** under the `training_dataset` folder.
+    *   `API_vectors.h5` and `vectors.h5`: Sentence embedding vectors for API and mashup descriptions.
 
-    *   Creates a `data` folder containing:
+    *   `api_tag_vector.h5` and `mashup_tag_vector.h5`: Embedding vectors for API and mashup tags.
 
-        *   `API_vectors.h5` and `vectors.h5`: Sentence embedding vectors for API and mashup descriptions.
+Each directory under the `dataset` folder  (`fold_1` to `fold_10`) contains the following files:
 
-        *   `api_tag_vector.h5` and `mashup_tag_vector.h5`: Embedding vectors for API and mashup tags.
+*   `RS.csv`: Test set of mashup–API pairs.
 
-    Each fold directory (`fold_1` to `fold_10`) includes the following files:
+*   `TE.csv`: Training set of mashup–API pairs.
 
-    *   `RS.csv`: Test set of mashup–API pairs.
+*   `api_tags.csv`, `Api_tag_mapping.csv`: API–tag relationships and tag–index mappings.
 
-    *   `TE.csv`: Training set of mashup–API pairs.
+*   `mashup_tags.csv`, `mashup_tag_mapping.csv`: Mashup–tag relationships and tag–index mappings.
 
-    *   `api_tags.csv`, `Api_tag_mapping.csv`: API–tag relationships and tag–index mappings.
+#### ✅ Step 2: **Model Training and Testing and Evaluation metrics**
 
-    *   `mashup_tags.csv`, `mashup_tag_mapping.csv`: Mashup–tag relationships and tag–index mappings.
+The provided wrapper script `run.py` is designed to **automate the entire experimental pipeline**, including:
 
-3.  **Model Training and Testing**
+*   Sequential training and testing on all **10 folds** of the dataset
 
-    To train and test the model on a specific fold, start Python in **command line** mode and execute the following (in one line):
+*   Printing **per-fold evaluation metrics** after each run
 
-        python main.py --dataset fold_1
+*   Computing and printing the **overall performance across all folds**
 
-    Here, `fold_1` can be replaced with `fold_2`, `fold_3`, ..., up to `fold_10`, corresponding to the ten folds of the dataset.
+✅ **If you use the Conda, ensure that the Conda environment is activated before running the script:**
 
-    Upon completion, the results will be saved in a folder named `output`, which contains the recommendation results for the specified fold.
+    conda activate R2API
 
-4.  **Evaluation Metrics**
+To train and test the model, start Python in **command line** mode and execute the following (in one line):
 
-    Once training and testing are complete for a given fold, you can **evaluate the model’s performance** by calculating the corresponding metrics. Use the command below:
+    python run.py
 
-        python metrics.py --dataset fold_1
+After execution, the results will be saved in the `output` folder, which includes recommendation results for the **10-fold dataset**.
 
-    **Make sure that the specified fold (**`fold_1`**, **`fold_2`, etc.) matches the one used in the training and testing step.
+&#x20;
 
-    You will obtain output in the following format:
+After each fold is completed, the corresponding evaluation metrics will be printed to the terminal in the following format:
 
-        The performance of fold_1 is as follows: 
-        N=3 -> Precision: 0.3111, Recall: 0.6639, MAP: 0.7231, NDCG: 0.6675, Cov: 0.1798 
-        N=5 -> Precision: 0.2022, Recall: 0.7088, MAP: 0.7249, NDCG: 0.6823, Cov: 0.2585 
-        N=10 -> Precision: 0.1116, Recall: 0.7593, MAP: 0.7157, NDCG: 0.7007, Cov: 0.4032 
-        N=20 -> Precision: 0.0598, Recall: 0.7975, MAP: 0.7071, NDCG: 0.7123, Cov: 0.5883
+    The performance of fold_1 is as follows: 
+    N=3 -> Precision: 0.3111, Recall: 0.6639, MAP: 0.7231, NDCG: 0.6675, Cov: 0.1798 
+    N=5 -> Precision: 0.2022, Recall: 0.7088, MAP: 0.7249, NDCG: 0.6823, Cov: 0.2585 
+    N=10 -> Precision: 0.1116, Recall: 0.7593, MAP: 0.7157, NDCG: 0.7007, Cov: 0.4032 
+    N=20 -> Precision: 0.0598, Recall: 0.7975, MAP: 0.7071, NDCG: 0.7123, Cov: 0.5883
 
-    These results reflect the performance of the model on **fold\_1**.
+These results reflect the model's performance on **fold\_1**.
+
+**⚠️** After all 10 folds of the programmable dataset are completed, the script will automatically display the **overall evaluation results across all folds**, using the same format as above.
 
 ### 1.3 Description of Essential Folders and Files
 
@@ -82,6 +107,7 @@ Our code has been tested under **Python 3.12.3**, and the following packages are
 | data          | Folder | Data files required for the experiment. Specifically: **api\_tag\_vector.h5** stores the semantic vectors of the API tags, **vector.h5** stores the semantic vectors of mashup descriptions, **api\_vector.h5** stores the semantic vectors of API descriptions, **mashup\_tag.h5** stores the semantic vectors of mashup tags |
 | original data | Folder | Save the data related to mashups and APIs used in the experiment, including the invocation relationships between mashups and APIs, the descriptions and tags of mashups, and the descriptions and tags of APIs.                                                                                                                |
 | main.py       | File   | Model training and testing python file of R2API                                                                                                                                                                                                                                                                                |
+| run.py        | File   | A **wrapper script** that automates the entire process of training and evaluating the R2API model under **10-fold cross-validation**                                                                                                                                                                                           |
 | Models.py     | File   | Model modules of R2API                                                                                                                                                                                                                                                                                                         |
 | utility       | Folder | Tools and essential libraries used by R2API                                                                                                                                                                                                                                                                                    |
 

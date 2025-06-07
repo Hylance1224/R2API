@@ -21,8 +21,8 @@ from utils import sumary, attention_map, get_indices, random_seed
 import json
 predict_api_num = 100
 topK = 100
-top_k_list = [3, 5, 10]
-epochs = 100
+top_k_list = [3, 5, 20]
+epochs = 30
 batch_size = 256
 
 # 实验参数
@@ -54,7 +54,7 @@ def save_test_results_to_json(mashup_name, true_apis, predicted_apis, filename='
     all_results.append(result)
 
     # 写入更新后的 JSON 文件
-    with open(filename, 'w') as f:
+    with open(filename, 'a') as f:
         json.dump(all_results, f, indent=4)
 
 Train_Loss_list = []
@@ -92,8 +92,8 @@ decoder = Decoder(embedding=decoder_embedding, hid_dim=hidden_dim * 2, n_layers=
 criterion = nn.CrossEntropyLoss(ignore_index=1) #
 
 
-encoder_optimizer = optim.Adam(encoder.parameters(), lr=0.0003, weight_decay=1e-5)
-decoder_optimizer = optim.Adam(decoder.parameters(), lr=0.0003, weight_decay=1e-5)
+encoder_optimizer = optim.Adam(encoder.parameters(), lr=0.001, weight_decay=1e-5)
+decoder_optimizer = optim.Adam(decoder.parameters(), lr=0.001, weight_decay=1e-5)
 lr_scheduler_encoder = torch.optim.lr_scheduler.ExponentialLR(optimizer=encoder_optimizer,
                                                               gamma=0.99)  # gamma 越小 lr 下降越多
 lr_scheduler_decoder = torch.optim.lr_scheduler.ExponentialLR(optimizer=decoder_optimizer, gamma=0.99)
@@ -233,8 +233,9 @@ def infer_one_batch_rl(hidden_n, outputs, outputs_category, src_lens, category_l
 def decode_greedy(
         hidden_n, outputs, outputs_category, src_lens, category_lens, tgt, tgt_lens, hidden_retrive, outputs_retrive,
         retrive_lens, outputs_retrive2, retrive2_lens, outputs_retrieve_category, retrieve_category_lens, tgt_apis, mashup_names, epoch):
-    # import json
-    # file = open(f'decode_greedy{epoch}.jsonl', 'w')
+    import json
+    if epoch == 29:
+        file = open(f'decode_greedy{epoch}.jsonl', 'w')
     decode_seq = []
     for di in range(100):
         if di == 0:
@@ -296,8 +297,9 @@ def decode_greedy(
                     "remove_apis": removed_apis[i],
                     "predict_apis": predicted_apis[i]
                 }
-                # file.write(json.dumps(record, ensure_ascii=False))
-                # file.write("\n")
+                if epoch == 29:
+                    file.write(json.dumps(record, ensure_ascii=False))
+                    file.write("\n")
 
             ndcg_, recall_, ap_, pre_ = metric(tgt.permute(1, 0)[:, 1:].cpu().numpy(),
                                                topk.indices.squeeze(0).cpu().numpy(), [3, 5, 10])

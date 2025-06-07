@@ -16,7 +16,7 @@ def parse_args():
                         help='choose the degree of the neighbors similiar to themselves')
     parser.add_argument('--similar_threthold', type=float, default=5,
                         help='choose the degree of the neighbors similiar to themselves')
-    parser.add_argument('--data_path', nargs='?', default='training_dataset/',
+    parser.add_argument('--data_path', nargs='?', default='dataset/',
                         help='Input data path.')
     parser.add_argument('--proj_path', nargs='?', default=r'',
                         help='Project path.')
@@ -24,11 +24,11 @@ def parse_args():
                         help='Whether save the recommendation results.')
     parser.add_argument('--dataset', nargs='?', default='fold_1',
                         help='Choose a dataset from given folder')
-    parser.add_argument('--pretrain', type=int, default=0,
+    parser.add_argument('--pretrain', type=int, default=1,
                         help='0: No pretrain, -1: Pretrain with the learned embeddings, 1:Pretrain with stored models.')
-    parser.add_argument('--verbose', type=int, default=1,
+    parser.add_argument('--verbose', type=int, default=100,
                         help='Interval of evaluation.')
-    parser.add_argument('--epoch', type=int, default=250,
+    parser.add_argument('--epoch', type=int, default=400,
                         help='Number of epoch.')
     parser.add_argument('--embed_size', type=int, default=512,
                         help='Embedding size.')

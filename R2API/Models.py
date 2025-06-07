@@ -88,7 +88,6 @@ class HCF(nn.Module):
 
 
     def forward(self, adj_u1,adj_u2,adj_i1,adj_i2,adj_m1,adj_m2,adj_a1,adj_a2):
-
         hu = self.user_embedding.weight
         embedding=[hu]
         for i in range(self.n_layers):

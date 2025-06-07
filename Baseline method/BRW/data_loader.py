@@ -40,11 +40,6 @@ def build_graph(mashups, apis, test_ids=set()):
             G.add_edge(mid, tag_id, type='tag')
             tag_nodes.add(tag_id)
 
-        # if m['id'] not in test_ids:
-        #     for aid in m['api_info']:
-        #         if aid in api_dict:
-        #             aid_str = f"a_{aid}"
-        #             G.add_edge(mid, aid_str, type='call')
         for aid in m['api_info']:
             if aid in api_dict:
                 aid_str = f"a_{aid}"

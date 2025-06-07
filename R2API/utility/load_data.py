@@ -198,12 +198,12 @@ class Data:
         print('already normalize adjacency matrix', time() - t2)
         return adj_mat.tocsr(), norm_adj_mat.tocsr(), mean_adj_mat.tocsr()
 
-    #给用户生成一个负采样池，每个用户采样100个不相关的物品
+    #给用户生成一个负采样池，每个用户采样200个不相关的物品
     def negative_pool(self):
         t1 = time()
         for u in self.train_items.keys():
             neg_items = list(set(range(self.n_items)) - set(self.train_items[u]))
-            pools = [rd.choice(neg_items) for _ in range(100)]
+            pools = [rd.choice(neg_items) for _ in range(200)]
             self.neg_pools[u] = pools
 
     def sample(self):

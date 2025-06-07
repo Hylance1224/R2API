@@ -6,7 +6,7 @@ import random
 import json
 from sklearn.model_selection import train_test_split
 from model.MSG.metric_new import metric, metric_string
-from model.MSG.utils import get_indices
+from utils import get_indices
 
 with open('./data/mashup_name.json', 'r') as file:
     mashups = json.load(file)
