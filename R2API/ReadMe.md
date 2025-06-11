@@ -20,8 +20,15 @@ We recommend setting up the environment using **Conda** to ensure compatibility 
 
     conda create -n R2API python=3.12.3 -y
     conda activate R2API 
+    
+#### ✅ Step 2: Install PyTorch manually
 
-#### ✅ Step 2: Install the required Python packages
+Visit the official PyTorch installation page [here](https://pytorch.org/) to choose the correct version for your environment.\
+For example, to install **PyTorch with CUDA 12.6**, use:
+
+    pip install torch --index-url https://download.pytorch.org/whl/cu126
+
+#### ✅ Step 3: Install the required Python packages
 
 Install all dependencies (except PyTorch) via `requirements.txt`:
 
@@ -29,12 +36,6 @@ Install all dependencies (except PyTorch) via `requirements.txt`:
 
 > ⚠️ Note: The `requirements.txt` file includes all necessary libraries **except for PyTorch**, which should be installed separately to match your system and CUDA version.
 
-#### ✅ Step 3: Install PyTorch manually
-
-Visit the official PyTorch installation page to choose the correct version for your environment.\
-For example, to install **PyTorch with CUDA 12.6**, use:
-
-    pip install torch --index-url https://download.pytorch.org/whl/cu126
 
 ### 1.2 Usage
 
@@ -52,9 +53,9 @@ This script uses the original files `Original Dataset/programmable_mashup.json` 
 
 *   Creates a `data` folder containing:
 
-    *   `API_vectors.h5` and `vectors.h5`: Sentence embedding vectors for API and mashup descriptions.
+    *   `API_vectors.h5` and `vectors.h5`: Semantic embedding vectors for API and mashup descriptions.
 
-    *   `api_tag_vector.h5` and `mashup_tag_vector.h5`: Embedding vectors for API and mashup tags.
+    *   `api_tag_vector.h5` and `mashup_tag_vector.h5`: Semantic embedding vectors for API and mashup tags.
 
 Each directory under the `dataset` folder  (`fold_1` to `fold_10`) contains the following files:
 
@@ -105,7 +106,7 @@ These results reflect the model's performance on **fold\_1**.
 | Name          | Type   | Description                                                                                                                                                                                                                                                                                                                    |
 | ------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | data          | Folder | Data files required for the experiment. Specifically: **api\_tag\_vector.h5** stores the semantic vectors of the API tags, **vector.h5** stores the semantic vectors of mashup descriptions, **api\_vector.h5** stores the semantic vectors of API descriptions, **mashup\_tag.h5** stores the semantic vectors of mashup tags |
-| original data | Folder | Save the data related to mashups and APIs used in the experiment, including the invocation relationships between mashups and APIs, the descriptions and tags of mashups, and the descriptions and tags of APIs.                                                                                                                |
+| Original Dataset | Folder | Save the data related to mashups and APIs used in the experiment, including the invocation relationships between mashups and APIs, the descriptions and tags of mashups, and the descriptions and tags of APIs.                                                                                                                |
 | main.py       | File   | Model training and testing python file of R2API                                                                                                                                                                                                                                                                                |
 | run.py        | File   | A **wrapper script** that automates the entire process of training and evaluating the R2API model under **10-fold cross-validation**                                                                                                                                                                                           |
 | Models.py     | File   | Model modules of R2API                                                                                                                                                                                                                                                                                                         |

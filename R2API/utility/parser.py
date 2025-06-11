@@ -24,7 +24,7 @@ def parse_args():
                         help='Whether save the recommendation results.')
     parser.add_argument('--dataset', nargs='?', default='fold_1',
                         help='Choose a dataset from given folder')
-    parser.add_argument('--pretrain', type=int, default=1,
+    parser.add_argument('--pretrain', type=int, default=0,
                         help='0: No pretrain, -1: Pretrain with the learned embeddings, 1:Pretrain with stored models.')
     parser.add_argument('--verbose', type=int, default=100,
                         help='Interval of evaluation.')
