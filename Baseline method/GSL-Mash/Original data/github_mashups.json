@@ -1,0 +1,385 @@
+[
+  {
+    "title": "",
+    "url": "https://github.com/wp-plugins/social-media-mashup",
+    "categories": "",
+    "description": "In this lab we will be using live data from the USGS (United States Geological Survey), specifically a data set showing significant earthquakes (M4.0 or greater) from the past week.\n\nOur goal is to:\n\nList information about each quake.\nDisplay a Google Map with a pin at the epicenter of each quake.",
+    "api_info": [
+      370,
+      843
+    ],
+    "id": 4493
+  },
+  {
+    "title": "",
+    "url": "https://github.com/nathanallen/geoquakes",
+    "categories": "",
+    "description": "Social Media Mashup provides a widget and template tag to display a combined social media & RSS stream. A simple options panel and minimal CSS make this plugin easy to install and visually compatible on any WordPress site.\n\nSee the [screenshots](http://wordpress.org/extend/plugins/social-media-mashup/screenshots/) for an example of the plugin in action.\n\n**Note:** Twitter stopped directly supporting RSS feeds a short while ago, and as a result Twitter feeds are intermittently disappearing from the mashup. We are currently working on a solution to make the Twitter feeds more reliable. **In the meantime,** use the caching feature of this plugin to increase the reliability of your Twitter feed.",
+    "api_info": [
+      827,
+      279,
+      298,
+      924
+    ],
+    "id": 4494
+  },
+  {
+    "title": "",
+    "url": "https://github.com/arosenkranz/gargantuanfm",
+    "categories": "",
+    "description": "With Gargantuan.FM, the user can easily throw on a curated playlist (channel) sourced from SoundCloud or he/she can make their own right from the site. While the music plays, the user also has the ability to change the visual scenery, sourced from curated YouTube playlists.",
+    "api_info": [
+      758,
+      924,
+      364
+    ],
+    "id": 4495
+  },
+  {
+    "title": "",
+    "url": "https://github.com/jamessdixon/WakeCountySchoolCrash/tree/master",
+    "categories": "",
+    "description": "Mashup of Wake County schools and traffic crash data Created at Triangle Open Data Day 2015",
+    "api_info": [
+      112
+    ],
+    "id": 4496
+  },
+  {
+    "title": "",
+    "url": "https://github.com/politicalmashup/politicalmashup.github.io/tree/master",
+    "categories": "",
+    "description": "The PM projects produced semantically annotated parliamentary proceedings/hansards for eight countries, covering the Netherlands, the UK, Canada, Belgium, the EU, and various nordic countries (Denmark, Sweden, Norway). We also provide rich data about parties and policians.",
+    "api_info": [
+      343
+    ],
+    "id": 4497
+  },
+  {
+    "title": "",
+    "url": "https://github.com/kellim/farmers-market-finder",
+    "categories": "",
+    "description": "Find and display farmers market locations on map",
+    "api_info": [
+      370
+    ],
+    "id": 4498
+  },
+  {
+    "title": "",
+    "url": "https://github.com/superhighfives/i-will-never-let-you-go-archive",
+    "categories": "",
+    "description": "An interactive WebGL music video.\n\nYou can watch it here.\n\nYou can read about how it was made here.\n\nYou can check out my other music here.",
+    "api_info": [
+      432
+    ],
+    "id": 4499
+  },
+  {
+    "title": "",
+    "url": "https://github.com/migmate/Hometown-Highlights",
+    "categories": "",
+    "description": "Hey there! Ever wondered what cool photos people are snapping in your hometown? I combined the powers of Facebook and Flickr to show you the best shots from where you grew up. Check it out!\n\nWhat's It Do?: So, 'Hometown Highlights' peeks at your Facebook profile (with your permission, of course!) to see where you're from. Then, it dives into Flickr to find some of the top photos from that place. It's like a quick trip down memory lane.",
+    "api_info": [
+      279,
+      298
+    ],
+    "id": 4500
+  },
+  {
+    "title": "",
+    "url": "https://github.com/xdevplatform/spotatweet",
+    "categories": "",
+    "description": "This web app filters the Twitter stream for #NowPlaying tweets, extracts track IDs from Spotify URLs, requests track data from the XXX API, displays the embedded Tweet in the web browser and plays a preview. ",
+    "api_info": [
+      827,
+      762
+    ],
+    "id": 4501
+  },
+  {
+    "title": "",
+    "url": "https://github.com/vinit4u16/mashup-orchestration-foursq-uber",
+    "categories": "",
+    "description": "In Apigee proxy the responses from both are mashed and presented to the app. You can either register to each foursquare and uber and create your own accounts and developer apps, or you can use the test api keys and secret.",
+    "api_info": [
+      306,
+      803
+    ],
+    "id": 4502
+  },
+  {
+    "title": "",
+    "url": "https://github.com/Jkhwan/googlemap-500px-mashup",
+    "categories": "",
+    "description": "we have created an app that plots images returned from 500px API onto the google map, based on the geolocation of the area that is being viewed on the map. Markers are then displayed and the user can click on each to see the actual image.",
+    "api_info": [
+      4,
+      370
+    ],
+    "id": 4503
+  },
+  {
+    "title": "",
+    "url": "https://github.com/sadranyi/Transit-Tracker",
+    "categories": "",
+    "description": "Features\nEasy Setup process with either zip code or combination or city, state and stop or station ID.\nProvides Transit Briefing, Arrivals, Alerts, Schedules and Detours\nInforms you of Scheduled times, estimated times and status (Late, Early, On time, Due)\nCan provide briefing for frequently requested stops, routes and Buses.\nIntuitive and contextual help and response.\nProvides Current Weather conditions in Stop city\nGives Random Famous Quotes\nGives Random Number Facts\nAbility to reset Device\nSeasonal Greetings",
+    "api_info": [
+      370
+    ],
+    "id": 4504
+  },
+  {
+    "title": "",
+    "url": "https://github.com/amamenko/auto-mashup-mix",
+    "categories": "",
+    "description": "Find Mixable Songs:\n\nSearch the Contentful CMS for songs that have the same mode (either major or minor).\nNarrow down mashup song combinations to those that are within one semitone up or down, have an up to 5% difference in tempo, and in which the instrumental song has at least four continuous song sections that match the sections of the vocal song.\nRemove mashup entries and associated audio assets if either one or both of the instrumental or vocal song entries have been deleted from Contentful due to not being found on any Billboard charts.\nCreate Mashups:\n\nMashups are created within a custom Dockerized AWS Lambda function written in TypeScript. The AWS Lambda Docker image is bundled with Node 18 and FFmpeg/FFprobe binary files.\nIf both instrumental and vocal entries exist, both audio assets are downloaded from Contentful and mixed using fluent-ffmpeg. A complex filter is used to trim and delay the matching vocal sections to match the beats of the appropriate associated sections of the instrumental track.\nThe pitch and tempo of the vocal audio are manipulated using FFMPEG's rubberband feature to match the instrumental track using a predetermined key-scale and tempo-scale factor. This factor is also used to adjust the beat positions of the vocal track identified with essentia.js.\nAudio inputs are normalized with FFMPEG's loudnorm filter to have similar audio volumes.\nVocal sections that are below a certain length threshold with respect to their associated instrumental section are looped.\nFades are added between each vocal section and between each loop.\nThe mixed MP3 mashup audio asset and entry containing data about the instrumental and vocal songs is stored in Contentful's CMS using the Content Management API. Additional information about the mix - such as vocal track mix start, mix end, and total duration - is also noted for use when mixing multiple mashups together.\nCreate Weekly Mix and Video of Selected Mashups:\n\nRandomly selects either 20 vetted mashups or at least 28 minutes total worth of continuous vetted mashup mixes without any repeats.\nIn December, at least 5 holiday songs (instrumental, accompaniment, or both), if available, are included throughout the mashup mix.\nDownloads each mashup's audio MP3 asset and each included song's cover photo from Contentful for use in both thumbnail creation and slideshow inclusion.\nCreates a full audio MP3 mix with FFMPEG of all the selected mashups with a crossfade to transition between each mashup mix.\nCreates a thumbnail JPEG image with dimensions 1280x720 using node-html-to-image. This thumbnail image has to be a JPEG in order to be able to be uploaded to Instagram via instagram-web-api. The thumbnail image contains the Auto Mashup logo and the most recent Billboard ranking week date superimposed onto a collage of eight randomly selected cover photos of songs featured in the current week's mashup mix.\nCreates a slideshow image with dimensions 1280x720 (to ultimately create a 720p video) for each mashup with node-html-to-image. Each slideshow image contains each song's track title, artist, cover photo, latest Billboard chart positions, and key/tempo information.\nCombines all the slideshow images with the full mashup audio mix using FFMPEG to show the appropriate slide image during the accompanying song's duration. Each slide is overlayed over and fades into the next slide.\nAdds a green-screen \"Like and Subscribe\" overlay banner at the beginning of each video and a green-screen \"Thanks for Watching\" overlay banner at the end of each video by using FFMPEG's colorkey filter.\nCombines the Auto Mashup intro video (featured in GIF format at the top of this section), hosted on Contentful, with the earlier-created main mix by first re-encoding each video with the x264 library and FFMPEG. The two videos are then concatenated with FFMPEG to create a final merged MP4 video.\nUpload to YouTube and Instagram:\n\nCreates a video title containing the most recent Billboard chart week date and three random artists featured in the current week's mashup video.\nCreates a video description containing details about Auto Mashup as well as its social links. The description also contains the timestamps and song details of all of the mashups featured in the current week's mashup video.\nUploads the video with a custom thumbnail to Auto Mashup's YouTube channel by means of the youtube-api, which leverages YouTube's Data API - particularly the videos:insert and thumbnails:set endpoints.\nAfter successful upload to YouTube, records the new YouTube URL to Contentful using the Content Management API.\nUploads the thumbnail image to Auto Mashup's Instagram account (@automaticmashup) using the instagram-web-api in a similar manner as featured in my other automated Instagram posting project, Daily Pixel Mike. This post features the most recent Billboard week date and three random artists featured in the current week's mashup video. A comment is automatically added to this post that includes a series of hashtags that also include the names of the three random artists featured in the caption.",
+    "api_info": [
+      924,
+      194,
+      762,
+      443
+    ],
+    "id": 4505
+  },
+  {
+    "title": "",
+    "url": "https://github.com/tejitak/lunchapp",
+    "categories": "",
+    "description": "Lunch Timer is a web application to coordinate your every day lunch group\nVote a restaurant by a configured lunch time\nShow a vote result when users access to the group after a configured lunch time\nAdmin application for your groups is also provided\nManage restaurants for each group\nManage facebook users in your group",
+    "api_info": [
+      279,
+      274,
+      918
+    ],
+    "id": 4506
+  },
+  {
+    "title": "",
+    "url": "https://github.com/PhuocThienTran/Facebook-Genius-Mashup",
+    "categories": "",
+    "description": "Designed to allow users to get the current “hit” songs of their favorite artists.",
+    "api_info": [
+      279
+    ],
+    "id": 4507
+  },
+  {
+    "title": "",
+    "url": "",
+    "categories": "",
+    "description": "Mashup of social media feeds about Patterson Park.",
+    "api_info": [
+      279,
+      827,
+      443
+    ],
+    "id": 4508
+  },
+  {
+    "title": "",
+    "url": "https://github.com/jtannas/CS50_Mashup",
+    "categories": "",
+    "description": "A mashup of data from a news RSS feed overlaid onto google maps markers (United States only).",
+    "api_info": [
+      370
+    ],
+    "id": 4509
+  },
+  {
+    "title": "",
+    "url": "https://github.com/agathe/FoursquareFlickrMap",
+    "categories": "",
+    "description": " A quick hack to create a map that displays the itinerary of a road trip using Foursquare checkins.\n Info boxes on the markers on the Google Map show some of the foursquare info and flickr photos.",
+    "api_info": [
+      306,
+      298,
+      370
+    ],
+    "id": 4510
+  },
+  {
+    "title": "",
+    "url": "https://github.com/allegromanontroppo/IcklePickles--trip-tracker",
+    "categories": "",
+    "description": "This is a single page app which pulls in photos from Flickr and plots them on a Googlemap.\n\nClicking the thumbnail shows a larger image with some further details and a link to the main Flickr photo. ",
+    "api_info": [
+      370,
+      298
+    ],
+    "id": 4511
+  },
+  {
+    "title": "",
+    "url": "https://github.com/migmate/Hometown-Highlights",
+    "categories": "",
+    "description": "Hey there! Ever wondered what cool photos people are snapping in your hometown? I combined the powers of Facebook and Flickr to show you the best shots from where you grew up. Check it out!\n\nWhat's It Do?: So, 'Hometown Highlights' peeks at your Facebook profile (with your permission, of course!) to see where you're from. Then, it dives into Flickr to find some of the top photos from that place. It's like a quick trip down memory lane.",
+    "api_info": [
+      298,
+      279
+    ],
+    "id": 4512
+  },
+  {
+    "title": "",
+    "url": "https://github.com/JacintaRoberts/flickr-maps",
+    "categories": "",
+    "description": "Aims to provide a fun, easy way to find images from around the world. This mashup allow users to search for and view photos from Flickr and display their geotagged locations onto an interactive map.",
+    "api_info": [
+      298,
+      370
+    ],
+    "id": 4513
+  },
+  {
+    "title": "",
+    "url": "https://github.com/klassmann/neighborhood-map",
+    "categories": "",
+    "description": "This project shows a map of a neighborhood and its sights that I want to visit. The main goal is providing a useful map and information about the place.",
+    "api_info": [
+      306,
+      370
+    ],
+    "id": 4514
+  },
+  {
+    "title": "",
+    "url": "https://github.com/ankitmohla24/Web-Mashup-Google-Maps-and-Geonames-APIs",
+    "categories": "",
+    "description": "A page having a map where one can click on any location to display the weather conditions location",
+    "api_info": [
+      325,
+      370
+    ],
+    "id": 4515
+  },
+  {
+    "title": "",
+    "url": "https://github.com/buildasign/LiveActivityMap",
+    "categories": "",
+    "description": "#Live Activity Map ##Overview The Live Activity Map is an \"Eye Candy\" display of a globe that zooms into locations in real time as location data is provided. This web application is best suited for a highly active event such as sales.",
+    "api_info": [
+      363,
+      507
+    ],
+    "id": 4516
+  },
+  {
+    "title": "",
+    "url": "https://github.com/shovanch/google-maps-mashup",
+    "categories": "",
+    "description": "Displays google maps with place specific news.\n\nUser can search for a place. It then shows latest news from that location when clicking on news markers.",
+    "api_info": [
+      370
+    ],
+    "id": 4517
+  },
+  {
+    "title": "",
+    "url": "https://github.com/arpanmangal/Mashup",
+    "categories": "",
+    "description": "Get instant news of your current location, favourite place or hometown with our app. Loaded with all Indian towns and cities consisting of a whoping 1,54,757 places database.",
+    "api_info": [
+      370
+    ],
+    "id": 4518
+  },
+  {
+    "title": "",
+    "url": "https://github.com/jasruan/WaytoJob-Api-Mashup",
+    "categories": "",
+    "description": "suppose to display results on google maps after searching for jobs.",
+    "api_info": [
+      437,
+      370
+    ],
+    "id": 4519
+  },
+  {
+    "title": "",
+    "url": "https://github.com/ArledgeMike/Fest-Gram",
+    "categories": "",
+    "description": "Fest Gram pulls a collection of Instagram photos based on the location endpoints and then displays them on a Google Map. ",
+    "api_info": [
+      370,
+      442
+    ],
+    "id": 4520
+  },
+  {
+    "title": "",
+    "url": "https://github.com/aspartame/seismo",
+    "categories": "",
+    "description": "Google Maps mashup of recent earthquakes. ",
+    "api_info": [
+      843,
+      370
+    ],
+    "id": 4521
+  },
+  {
+    "title": "",
+    "url": "https://github.com/ernestdpeterson/googleMaps",
+    "categories": "",
+    "description": "The purpose of this app is to display a full page map with location markers and list of locations",
+    "api_info": [
+      507,
+      370
+    ],
+    "id": 4522
+  },
+  {
+    "title": "",
+    "url": "https://github.com/rick-peterson/mashup",
+    "categories": "",
+    "description": "News web app covering all US cities appearing on google maps",
+    "api_info": [
+      370
+    ],
+    "id": 4523
+  },
+  {
+    "title": "",
+    "url": "https://github.com/mwagner19446/magical_history_app",
+    "categories": "",
+    "description": "Magical History Tour (MHT) is a web application that allows users to customize tours by selecting Points of Interest.",
+    "api_info": [
+      370,
+      321
+    ],
+    "id": 4524
+  },
+  {
+    "title": "",
+    "url": "https://github.com/supermonk/MashupGoogleMaps4Square",
+    "categories": "",
+    "description": "Run this Dynamic Web project on Apache Tomcat 8 Should Show a page with Google Maps plotted Enter the city name and search query in the text boxes next to each other",
+    "api_info": [
+      306,
+      370
+    ],
+    "id": 4525
+  },
+  {
+    "title": "",
+    "url": "https://github.com/Kyle-Gifford/my-favorite-restaurants-app",
+    "categories": "",
+    "description": "This is a client based web app that shows my favorite Restaurants on a google map. ",
+    "api_info": [
+      918,
+      370
+    ],
+    "id": 4526
+  },
+  {
+    "title": "",
+    "url": "https://github.com/raksha105/RealEstate-estimator",
+    "categories": "",
+    "description": "Click a house on the map , the application will display the postal address and the estimated price of the house.",
+    "api_info": [
+      370,
+      933
+    ],
+    "id": 4527
+  }
+]
